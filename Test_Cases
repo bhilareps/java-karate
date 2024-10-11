@@ -1,0 +1,30 @@
+// If we want to Search Box Behaviour :
+
+1. Search Box sends a request to Backend Server to fetch the results 
+
+2. What we need : 
+    1.API URL (The Endpoint) that search box calls
+    2.HTTP Method (GET AND POST)
+    3.The parameters (like search keywords) that request sends
+
+3.Creation of .feature file (GET METHOD)
+    Feature: Test search box functionality
+
+  Scenario: Search for a term and verify results
+    Given url 'https://xyz.com'
+    And param query = 'pratham'      # The query parameter for the search term
+    When method GET               # If your search uses a GET method
+    Then status 200               # Ensure the request is successful
+    And match response.results.length > 0    # Verify that results are returned
+    And match response.results[0].title contains 'pratham'  # Check that the first result contains the search term
+
+4.Creation of .feature file (POST METHOD)
+    Feature: Test search box functionality
+
+  Scenario: Search for 'laptop' using a POST request
+    Given url 'https://your-app-backend.com/search'
+    And request { "searchTerm": "Pratham" }  # Sending the search term in the request body
+    When method POST
+    Then status 200
+    And match response.results.length > 0
+    And match response.results[0].title contains 'Pratham'

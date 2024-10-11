@@ -1,0 +1,18 @@
+1. pom.xml
+    -Project Object Model file (Dependencies,build lifcycle,plugins)
+    -External Libraries- karate-junit5
+
+2. src/test/java 
+    -Test cases are written in .feature file
+    -test execution is managed by Java Classes
+
+3. src/test/java/karate
+    - Test cases --> .feature files
+
+4. src/test/java 
+    - Java classes for test execution
+
+5. Target Directory
+    -Generate HTML test reports after running tests 
+
+
