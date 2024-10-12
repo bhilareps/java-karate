@@ -16,19 +16,28 @@ class KarateTestRunner {
         return Karate.run("FirstTest").relativeTo(getClass());
     }
 
+    //GET METHOD
     @Karate.Test
     Karate get_method() {
         return Karate.run("Get_").relativeTo(getClass());
     }
 
+    //POST METHOD
     @Karate.Test
     Karate post_method() {
         return Karate.run("Post_").relativeTo(getClass());
     }
 
+    //PUT METHOD
     @Karate.Test
     Karate put_method() {
         return Karate.run("Put_").relativeTo(getClass());
+    }
+
+    //DELETE METHOD
+    @Karate.Test
+    Karate delete_method() {
+        return Karate.run("Delete_").relativeTo(getClass());
     }
 
     
