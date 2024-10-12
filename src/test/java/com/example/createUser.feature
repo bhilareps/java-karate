@@ -5,3 +5,6 @@ Feature: Sample API Test
     And request { name: 'John Doe', email: 'john.doe@example.com' }
     When method POST
     Then status 201
+
+
+

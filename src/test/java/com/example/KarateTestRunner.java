@@ -1,5 +1,31 @@
 package com.example;
 
+import com.intuit.karate.junit5.Karate;
+
+class KarateTestRunner {
+
+    // working successfully
+    @Karate.Test
+    Karate testAll() {
+        return Karate.run("example").relativeTo(getClass());
+    }
+
+    //working successfully
+    @Karate.Test
+    Karate testFirstTest() {
+        return Karate.run("FirstTest").relativeTo(getClass());
+    }
+
+    @Karate.Test
+    Karate get_method() {
+        return Karate.run("Get_").relativeTo(getClass());
+    }
+
+
+
+    
+}
+
 // package com.example;
 // import com.intuit.karate.junit5.Karate;
 // // import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -31,25 +57,3 @@ package com.example;
 //         return Karate.run("karate/postMethodTest").relativeTo(getClass());
 //     }
 // }
-
-import com.intuit.karate.junit5.Karate;
-
-class KarateTestRunner {
-
-    @Karate.Test
-    Karate testAll() {
-        return Karate.run("example").relativeTo(getClass());
-    }
-
-    @Karate.Test
-    Karate testCreateUser() {
-        return Karate.run("createUser").relativeTo(getClass());
-    }
-    
-    @Karate.Test
-    Karate testPostMethod() {
-        return Karate.run("postMethodTest").relativeTo(getClass());
-    }
-    
-}
-
