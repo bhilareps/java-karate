@@ -40,6 +40,13 @@ class KarateTestRunner {
         return Karate.run("Delete_").relativeTo(getClass());
     }
 
+    // config demo
+    @Karate.Test
+    Karate config_demo()
+    {
+        // System.setProperty("karate.env", "qa");
+        return Karate.run("ConfigDemo1").relativeTo(getClass());
+    }
     
 }
 
