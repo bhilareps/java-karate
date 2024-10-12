@@ -1,4 +1,4 @@
-Here’s a simple **README** for your Java Karate testing project, covering API testing of **GET**, **POST**, **PUT**, and **DELETE** methods.
+
 
 ---
 
