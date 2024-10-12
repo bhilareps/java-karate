@@ -26,7 +26,10 @@ class KarateTestRunner {
         return Karate.run("Post_").relativeTo(getClass());
     }
 
-
+    @Karate.Test
+    Karate put_method() {
+        return Karate.run("Put_").relativeTo(getClass());
+    }
 
     
 }
